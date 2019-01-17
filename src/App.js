@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import StockPrice from './components/StockPrice';
+import Jaime from './components/Jaime';
+import Loss from './components/Loss';
+import axios from 'axios'
 import './App.css';
 
 class App extends Component {
+  state = {
+      stockPrice: 1,
+      jaimeAmt: 100,
+      jaimePrice: 4
+  }
+
+  componentDidMount() {
+    axios.get('https://api.iextrading.com/1.0/stock/f/price').then(res => this.setState({ stockPrice: res.data }));
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <table>
+          <tr>
+            <td>
+              <StockPrice price={this.state.stockPrice}  />
+            </td>
+            <td>
+              <Jaime price={this.state.jaimePrice} amt={this.state.jaimeAmt} />
+            </td>
+          </tr>
+          <tr>
+            <td colSpan='2'>
+              <Loss currentPrice={this.state.stockPrice} soldPrice={this.state.jaimePrice} soldAmt={this.state.jaimeAmt} />
+            </td>
+          </tr>
+        </table>
       </div>
     );
   }
