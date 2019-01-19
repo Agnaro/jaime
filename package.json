@@ -2,7 +2,7 @@
   "name": "jaime-ford-stock",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Agnaro.github.io/jaime",
+  "homepage": "https://agnaro.github.io/jaime",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.7.0",
