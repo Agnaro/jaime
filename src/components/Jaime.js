@@ -6,7 +6,7 @@ export class Jaime extends Component {
   render() {
     return (
       <div className='fordBox'>
-        Jaime sold his stocks at
+        Jaime sold his stocks at:
         <div className='soldPrice'>
             <NumberFormat value={this.props.price} displayType={'text'} prefix={'$'} decimalScale={2} fixedDecimalScale={true} ></NumberFormat>    
         </div>

@@ -6,7 +6,7 @@ export class Loss extends Component {
 
     getStyle = () => {
         return {
-            color: this.props.currentPrice > 0 ? 'green' : 'red'
+            color: this.props.currentPrice > 0 ? 'red': 'green'
         }
     }
 
@@ -17,7 +17,7 @@ export class Loss extends Component {
   render() {
     return (
       <div className='lossBox'>
-        Jaime's lossed profits:
+        Jaime's lost profits:
         <div className='lossAmt' style={this.getStyle()}>
             <NumberFormat value={this.getTotal()} displayType={'text'} prefix={'$'} decimalScale={2} fixedDecimalScale={true} ></NumberFormat>    
         </div>

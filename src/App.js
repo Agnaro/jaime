@@ -8,8 +8,8 @@ import './App.css';
 class App extends Component {
   state = {
       stockPrice: 1,
-      jaimeAmt: 100,
-      jaimePrice: 4
+      jaimeAmt: 10,
+      jaimePrice: 7.65
   }
 
   componentDidMount() {

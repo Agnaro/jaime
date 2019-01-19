@@ -4,8 +4,8 @@ body {
 
 .App {
   position: fixed;
-  top: 33%;
-  left: 20%;
+  top: 20%;
+  left: 15%;
 }
 
 .fordBox {
@@ -15,11 +15,12 @@ body {
   border-radius: 25px;
   padding: 20px;
   width: 100px;
-  height: 100px;
+  height: 120px;
   color: white;
   text-shadow: 2px 2px #000000;
   text-align: center;
   vertical-align: middle;
+  font-size: 18px;
 }
 
 .lossBox {
@@ -34,17 +35,23 @@ body {
   text-shadow: 2px 2px #000000;
   text-align: center;
   vertical-align: middle;
+  font-size: 24px;
 
 }
 
 .stockPrice {
   font-size: 30px;
   padding-top: 5px;
+  color: #7eff85;
+  font-weight: bold;
 }
 
 .soldPrice {
   font-size: 30px;
   padding-top: 5px;
+  color: black;
+  text-shadow: none;
+  font-weight: bold;
 }
 
 .lossAmt {
